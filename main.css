@@ -6,13 +6,18 @@
 
 /*  :root selector represents the <html> element in the HTML page. */
 :root {
-    --white: #FFFFFF;
+    height: 100%;
+    --white: #fff5f0;
     --black: #000000;
 
-    --pink: #fac5c5; /* light background */
+    --pink: #9a8c98;          /* button */
+    --pinkBorder: #857983;    /* button */
+
+    --menuGrey: #545454;
+    --menuGreyBorder: #545454;
+
     --greyTop: #404040; /* dark background */
-    --greyBottom: #282828;
-    --gold: #f2b933 ; /* button color */
+    --greyBottom: #212121;
 }
 
 
@@ -25,15 +30,90 @@ body {
     font-family: byuFont;
 }
 
-/* the styling for unordered lists */
-ul {
-    /*font-family: SansSerif;*/
+/* Used with the score div*/
+.score {
+    width: 100px;
+    border-radius: 8px;
+    background: var(--pink);
+    border: 2px solid var(--pinkBorder);
+    padding: 10px 25px;
+    float: right;
 }
 
-/* styling for list elements */
-li {
-    list-style: circle;
+
+
+/* FOR THE DESCRIPTIONS */
+textarea {
+    resize: none;
+
+    border-radius: 8px;
+    display: block;
+    width: 99%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+           -moz-box-sizing: border-box; /* Firefox, other Gecko */
+                box-sizing: border-box; /* Opera/IE 8+ */
+
+    background-color: var(--menuGrey);        /* background */
+    border: 2px solid var(--menuGreyBorder);  /* border */
+
+    color: var(--white);
+    font-family: byuFont;
+    font-size: 20px;
 }
+
+
+/* BUTTONS */
+.btn-choices button {
+    width: 33%;
+    height: 20%;
+
+    font-size: 16px;
+
+    background-color: var(--pink);  /* background */
+    border: 2px solid var(--pinkBorder);   /* border */
+    color: var(--white);               /* White text */
+    padding: 10px 24px;         /* Some padding */
+    float: left;                /* Float the buttons side by side */
+}
+
+.btn-choices button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/*
+*  Clear floats (clearfix hack)
+*  idk why I have this
+*/
+.btn-choices:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Add a background color on hover */
+.btn-choices button:hover {
+    background-color: var(--pinkBorder);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FONTS */
 
 /* Idk entirely what happens here, but uses the tff file */
 @font-face {
@@ -41,30 +121,30 @@ li {
     src: url(PublicSans-Regular.ttf);
 }
 
-.btn {
-    /*todo change to be workable with phones*/
-    position: absolute;
-    top: 20px;
-    left: 250px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-}
-
 
 .dark-theme {
     --bg: var(--black);
     --fontColor: var(--white);
-    --btnFontColor: var(--white);
-    --btnBg: var(--gold);
 
     /* Adds the gradient*/
     /* TODO: Make gradient cover whole page == once I can put it on phone*/
     background-image: linear-gradient(to bottom right, var(--greyTop), var(--greyBottom));
 }
+
+
+
+
+/*.bold {*/
+/*    font-family: byuFont_Bold;*/
+/*    src: url(PublicSans-SemiBold.ttf);*/
+/*}*/
+
+
+
+
+
+
+/*  ID is only used to identify one single element in our HTML. Class, multiple*/
 
 
 /* Each HTML element that contains a class attribute set to list will get these styles. */
@@ -75,4 +155,18 @@ li {
 /*!* msg is an ID selector. The HTML element that has its id attribute set to msg will get this *!*/
 /*#msg {*/
 /*    font-family: monospace;*/
+/*}*/
+
+
+/*.btn {*/
+/*    !*todo change to be workable with phones*!*/
+/*    position: absolute;*/
+/*    top: 20px;*/
+/*    left: 250px;*/
+/*    height: 50px;*/
+/*    width: 50px;*/
+/*    border-radius: 50%;*/
+/*    border: none;*/
+/*    color: var(--btnFontColor);*/
+/*    background-color: var(--btnBg);*/
 /*}*/
