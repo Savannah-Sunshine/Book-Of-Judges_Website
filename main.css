@@ -1,0 +1,78 @@
+
+
+/* CSS file for your styling/how page looks */
+/* CSS = Cascading Style Sheets */
+
+
+/*  :root selector represents the <html> element in the HTML page. */
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --pink: #fac5c5; /* light background */
+    --greyTop: #404040; /* dark background */
+    --greyBottom: #282828;
+    --gold: #f2b933 ; /* button color */
+}
+
+
+
+/* styles applied to the <body> are inherited by other lowers elements (ex: h1) */
+body {
+    /* bg and fontColor are set in .light-theme and .dark-theme*/
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: byuFont;
+}
+
+/* the styling for unordered lists */
+ul {
+    /*font-family: SansSerif;*/
+}
+
+/* styling for list elements */
+li {
+    list-style: circle;
+}
+
+/* Idk entirely what happens here, but uses the tff file */
+@font-face {
+    font-family: byuFont;
+    src: url(PublicSans-Regular.ttf);
+}
+
+.btn {
+    /*todo change to be workable with phones*/
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white);
+    --btnFontColor: var(--white);
+    --btnBg: var(--gold);
+
+    /* Adds the gradient*/
+    /* TODO: Make gradient cover whole page == once I can put it on phone*/
+    background-image: linear-gradient(to bottom right, var(--greyTop), var(--greyBottom));
+}
+
+
+/* Each HTML element that contains a class attribute set to list will get these styles. */
+/*.list {*/
+/*    list-style: square;*/
+/*}*/
+
+/*!* msg is an ID selector. The HTML element that has its id attribute set to msg will get this *!*/
+/*#msg {*/
+/*    font-family: monospace;*/
+/*}*/
