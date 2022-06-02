@@ -1,11 +1,5 @@
-
-
-/* CSS file for your styling/how page looks */
-/* CSS = Cascading Style Sheets */
-
-
-/*  :root selector represents the <html> element in the HTML page. */
 :root {
+    /*  :root selector represents the <html> element in the HTML page. */
     height: 100%;
     --white: #fff5f0;
     --black: #000000;
@@ -49,18 +43,25 @@ textarea {
     border-radius: 8px;
     display: block;
     width: 99%;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-           -moz-box-sizing: border-box; /* Firefox, other Gecko */
-                box-sizing: border-box; /* Opera/IE 8+ */
+    float: right;
+    -webkit-box-sizing: border-box;             /* Safari/Chrome, other WebKit */
+           -moz-box-sizing: border-box;         /* Firefox, other Gecko */
+                box-sizing: border-box;         /* Opera/IE 8+ */
 
-    background-color: var(--menuGrey);        /* background */
-    border: 2px solid var(--menuGreyBorder);  /* border */
+    background-color: var(--menuGrey);          /* background */
+    border: 2px solid var(--menuGreyBorder);    /* border */
 
     color: var(--white);
     font-family: byuFont;
     font-size: 20px;
 }
-
+.brand {
+    width: 30%;
+    border-radius: 8px;
+    border: 2px solid var(--pinkBorder);
+    padding: 10px 50px;
+    float: left;
+}
 
 /* BUTTONS */
 .btn-choices button {
@@ -69,11 +70,11 @@ textarea {
 
     font-size: 16px;
 
-    background-color: var(--pink);  /* background */
-    border: 2px solid var(--pinkBorder);   /* border */
-    color: var(--white);               /* White text */
-    padding: 10px 24px;         /* Some padding */
-    float: left;                /* Float the buttons side by side */
+    background-color: var(--pink);          /* background */
+    border: 2px solid var(--pinkBorder);    /* border */
+    color: var(--white);                    /* White text */
+    padding: 10px 24px;                     /* Some padding */
+    float: right;                           /* Float the buttons side by side */
 }
 
 .btn-choices button:not(:last-child) {
